@@ -18,8 +18,8 @@ body { margin: 0; overflow: hidden; background: var(--cream); color: var(--ink);
 a { color: inherit; }
 
 .hero { min-height: 100dvh; position: relative; overflow: hidden; isolation: isolate; color: var(--cream); background: var(--deep); }
-.hero-image { position: absolute; inset: 0; z-index: -3; background: url('1.jpg') center 44% / cover no-repeat; animation: arrive 1.4s ease-out both; }
-.hero-image-next { z-index: -3; opacity: 0; background-image: url('2.jpg'); animation: none; transition: opacity 1.2s ease; }
+.hero-image { position: absolute; inset: 0; z-index: -3; background: url('1.jpeg') center 44% / cover no-repeat; animation: arrive 1.4s ease-out both; }
+.hero-image-next { z-index: -3; opacity: 0; background-image: url('2.jpeg'); animation: none; transition: opacity 1.2s ease; }
 .hero-wash { position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, rgba(9, 29, 27, .94) 0%, rgba(9, 29, 27, .74) 38%, rgba(9, 29, 27, .06) 77%), linear-gradient(0deg, rgba(9, 29, 27, .8), transparent 46%); }
 .photo-arrow { position: absolute; top: 50%; z-index: 2; display: grid; place-items: center; width: 52px; height: 52px; border: 1px solid rgba(244,239,230,.55); border-radius: 50%; background: rgba(14,41,39,.48); color: var(--cream); cursor: pointer; font: 28px var(--sans); transform: translateY(-50%); transition: background .2s ease, border-color .2s ease, transform .2s ease; }
 .photo-arrow:hover { border-color: var(--sun); background: rgba(14,41,39,.86); transform: translateY(-50%) scale(1.08); }
