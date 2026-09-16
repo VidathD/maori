@@ -4,12 +4,22 @@ const stopButton = document.querySelector('#stop-countdown');
 const previousPhoto = document.querySelector('#previous-photo');
 const nextPhoto = document.querySelector('#next-photo');
 const backgroundLayers = document.querySelectorAll('.hero-image');
-const backgroundImages = ['1.jpg', '2.jpg', '3.jpeg', '4.jpeg', '5.jpeg', '6.jpeg'];
+const desktopImages = ['1.jpeg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpeg', '6.jpeg', '7.jpeg', '8.jpeg'];
+const mobileImages = ['1.jpeg', '5.jpeg', '6.jpeg', '7.jpeg', '8.jpeg', '3.jpeg', '4.jpeg', '2.jpeg'];
+const mobileQuery = window.matchMedia('(max-width: 720px)');
+let backgroundImages = mobileQuery.matches ? mobileImages : desktopImages;
 let secondsLeft = 10;
 let timer = null;
 let currentImage = 0;
 let activeLayer = 0;
 let slideshowTimer = null;
+
+mobileQuery.addEventListener('change', ({ matches }) => {
+  const currentPhoto = backgroundImages[currentImage];
+  backgroundImages = matches ? mobileImages : desktopImages;
+  currentImage = backgroundImages.indexOf(currentPhoto);
+  if (currentImage < 0) currentImage = 0;
+});
 
 function startRedirect() {
   timer = window.setInterval(() => {
