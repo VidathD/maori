@@ -14,7 +14,10 @@
   <main class="page-shell">
     <section class="hero" aria-labelledby="page-title">
       <div class="hero-image" role="img" aria-label="Team Maori by the sea in traditional costume"></div>
+      <div class="hero-image hero-image-next" aria-hidden="true"></div>
       <div class="hero-wash"></div>
+      <button class="photo-arrow photo-arrow-prev" id="previous-photo" type="button" aria-label="Show previous photo" title="Previous photo">&lt;</button>
+      <button class="photo-arrow photo-arrow-next" id="next-photo" type="button" aria-label="Show next photo" title="Next photo">&gt;</button>
       <header class="topbar">
         <a class="wordmark" href="index.html" aria-label="Team Maori home"><span>MAO</span>RI</a>
         <p class="event-label">STRIDIAN <i>/</i> MHC 2024</p>
@@ -30,54 +33,12 @@
           <a class="text-link" href="https://www.facebook.com/MoraHikingClub/" target="_blank" rel="noopener noreferrer">Follow MHC <span>↗</span></a>
         </div>
       </div>
-      <div class="scroll-note"><span class="scroll-line"></span> Scroll to see the team</div>
-    </section>
-
-    <section class="support-section" aria-labelledby="support-title">
-      <div class="support-intro">
-        <p class="eyebrow">Your support matters</p>
-        <h2 id="support-title">One like.<br><em>One more step.</em></h2>
-      </div>
-      <div class="support-copy">
-        <p>Every reaction helps our team move forward. Like the post, follow the Mora Hiking Club page, and help Team Maori carry the energy of the coast into Stridian.</p>
-        <a class="outline-button" href="https://www.facebook.com/share/p/18GUnT3urx/" target="_blank" rel="noopener noreferrer">Support Team Maori <span>↗</span></a>
-      </div>
-    </section>
-
-    <section class="gallery" aria-label="Team Maori moments">
-      <figure class="gallery-large"><img src="1.jpg" alt="Team Maori standing together by the ocean" loading="lazy"><figcaption>Our people, our pulse</figcaption></figure>
-      <figure><img src="6.jpeg" alt="Team Maori silhouette raising a ceremonial spear at sunset" loading="lazy"><figcaption>Spirit in motion</figcaption></figure>
-      <figure><img src="3.jpeg" alt="Team Maori celebrating together on the rocks" loading="lazy"><figcaption>Made together</figcaption></figure>
-      <figure><img src="2.jpg" alt="Team Maori walking out of the sea together" loading="lazy"><figcaption>Forward, together</figcaption></figure>  
-      <figure><img src="4.jpeg" alt="Team Maori at sunset by the sea" loading="lazy"><figcaption>Carrying the story</figcaption></figure>
-      <figure><img src="5.jpeg" alt="Team Maori silhouette holding the Maori symbol at sunset" loading="lazy"><figcaption>Into the dusk</figcaption></figure>
-    </section>
-
-    <div class="countdown-wrap">
-      <div class="countdown" id="countdown" aria-live="polite">
-        <span class="countdown-number" id="countdown-number">5</span>
+      <div class="hero-countdown" aria-live="polite">
+        <span class="countdown-number" id="countdown-number">10</span>
         <span class="countdown-label">Opening our<br>Facebook post</span>
         <button class="stop-button" id="stop-countdown" type="button">Stay here</button>
       </div>
-    </div>
-    <section class="redirect-section" id="redirect-section" aria-labelledby="redirect-title">
-      <div>
-        <p class="eyebrow">You made it to the end</p>
-        <h2 id="redirect-title">Like &amp; follow<br><em>to support us.</em></h2>
-      </div>
-      <div class="redirect-copy">
-        <p>Thanks for standing with Team Maori. We are taking you to our Facebook post so you can leave a like and follow the Mora Hiking Club page.</p>
-      </div>
     </section>
-    <a class="social-fab" href="https://www.facebook.com/share/p/18GUnT3urx/" target="_blank" rel="noopener noreferrer" aria-label="Like and follow Team Maori on Facebook">
-      <svg class="facebook-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3.3 0-5 1.9-5 5v3H6v4h3v8h4v-8h3.5l.5-4H13V9c0-.7.3-1 1-1Z"/></svg>
-      <span>Like &amp; follow to support us</span>
-      <span class="social-arrow" aria-hidden="true">↗</span>
-    </a>
-
-    <footer class="footer">
-      <span>TEAM MAORI</span><span>STRIDIAN × MORA HIKING CLUB</span><span>UNIVERSITY OF MORATUWA</span>
-    </footer>
   </main>
   <script src="script.js"></script>
 </body>

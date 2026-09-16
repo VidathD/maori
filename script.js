@@ -1,15 +1,17 @@
 const destination = 'https://www.facebook.com/share/p/18GUnT3urx/';
-const redirectSection = document.querySelector('#redirect-section');
 const countdown = document.querySelector('#countdown-number');
 const stopButton = document.querySelector('#stop-countdown');
-let secondsLeft = 5;
+const previousPhoto = document.querySelector('#previous-photo');
+const nextPhoto = document.querySelector('#next-photo');
+const backgroundLayers = document.querySelectorAll('.hero-image');
+const backgroundImages = ['1.jpg', '2.jpg', '3.jpeg', '4.jpeg', '5.jpeg', '6.jpeg'];
+let secondsLeft = 10;
 let timer = null;
-let hasStarted = false;
+let currentImage = 0;
+let activeLayer = 0;
+let slideshowTimer = null;
 
 function startRedirect() {
-  if (hasStarted) return;
-
-  hasStarted = true;
   timer = window.setInterval(() => {
     secondsLeft -= 1;
     countdown.textContent = secondsLeft;
@@ -21,6 +23,35 @@ function startRedirect() {
   }, 1000);
 }
 
+function showPhoto(nextIndex) {
+  currentImage = (nextIndex + backgroundImages.length) % backgroundImages.length;
+  activeLayer = activeLayer === 0 ? 1 : 0;
+  const nextLayer = backgroundLayers[activeLayer];
+  nextLayer.style.backgroundImage = `url('${backgroundImages[currentImage]}')`;
+  nextLayer.style.opacity = '1';
+  backgroundLayers[activeLayer === 0 ? 1 : 0].style.opacity = '0';
+}
+
+function restartSlideshow() {
+  window.clearTimeout(slideshowTimer);
+  slideshowTimer = window.setTimeout(() => {
+    showPhoto(currentImage + 1);
+    restartSlideshow();
+  }, 4000);
+}
+
+previousPhoto.addEventListener('click', () => {
+  showPhoto(currentImage - 1);
+  restartSlideshow();
+});
+
+nextPhoto.addEventListener('click', () => {
+  showPhoto(currentImage + 1);
+  restartSlideshow();
+});
+
+restartSlideshow();
+
 stopButton.addEventListener('click', () => {
   window.clearInterval(timer);
   countdown.textContent = '—';
@@ -28,11 +59,4 @@ stopButton.addEventListener('click', () => {
   stopButton.disabled = true;
 });
 
-const redirectObserver = new IntersectionObserver(([entry]) => {
-  if (!entry.isIntersecting) return;
-
-  startRedirect();
-  redirectObserver.disconnect();
-}, { threshold: 0.5 });
-
-redirectObserver.observe(redirectSection);
+startRedirect();
