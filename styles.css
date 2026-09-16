@@ -18,7 +18,7 @@ body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(
 a { color: inherit; }
 
 .hero { min-height: min(860px, 100vh); position: relative; overflow: hidden; isolation: isolate; color: var(--cream); background: var(--deep); }
-.hero-image { position: absolute; inset: 0; z-index: -3; background: url('1.jpg') center 44% / cover no-repeat; animation: arrive 1.4s ease-out both; }
+.hero-image { position: absolute; inset: 0; z-index: -3; background: url('1.jpeg') center 44% / cover no-repeat; animation: arrive 1.4s ease-out both; }
 .hero-wash { position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, rgba(9, 29, 27, .94) 0%, rgba(9, 29, 27, .74) 38%, rgba(9, 29, 27, .06) 77%), linear-gradient(0deg, rgba(9, 29, 27, .8), transparent 46%); }
 .topbar, .hero-content, .scroll-note { position: absolute; }
 .topbar { top: 32px; left: 5vw; right: 5vw; display: flex; justify-content: space-between; align-items: center; }
