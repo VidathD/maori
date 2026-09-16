@@ -81,6 +81,7 @@ h1 em, h2 em { color: var(--sun); font-style: italic; }
 @media (max-width: 720px) {
   .hero { min-height: 100svh; }
   .hero-image { background-position: 62% center; }
+  .hero-image-next { background-image: url('5.jpeg'); }
   .hero-wash { background: linear-gradient(180deg, rgba(9,29,27,.82), rgba(9,29,27,.35) 40%, rgba(9,29,27,.9) 100%); }
   .topbar { top: 22px; }
   .event-label { font-size: 8px; }
