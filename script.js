@@ -18,7 +18,7 @@ function startRedirect() {
 
     if (secondsLeft <= 0) {
       window.clearInterval(timer);
-      window.location.replace(destination);
+      window.location.assign(destination);
     }
   }, 1000);
 }
