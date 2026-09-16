@@ -8,4 +8,4 @@ Static GitHub Pages landing page for Team Maori's Stridian competition support c
 2. Open **Settings → Pages**.
 3. Choose **Deploy from a branch**, select `main`, and select `/ (root)`.
 
-The site uses the images in the repository and redirects visitors to the Facebook post after 5 seconds.
+The site uses the images in the repository and redirects visitors to the Facebook post after 10 seconds.
